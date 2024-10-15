@@ -378,7 +378,8 @@ async def change_contact(callback: CallbackQuery):
         url="https://yandex.ru/maps/org/hookahplace_life/143683058547?si=dv8cwb3uyqueubzqfbuf71a080"
         )
     try:
-        await callback.message.answer("Мы одни из лучших заведений в городе, что подтверждает наш высокий рейтинг на картах.\n\nИ всегда стремимся к тому, чтобы каждый гость чувствовал себя как дома и качественно отдыхал в нашем заведении!\n\nПриходите к нам и убедитесь сами!")
+        await callback.message.answer("Мы одни из лучших заведений в городе, что подтверждает наш высокий рейтинг на картах.\n\nИ всегда стремимся к тому, чтобы каждый гость чувствовал себя как дома и качественно отдыхал в нашем заведении!\n\nПриходите к нам и убедитесь сами!",
+            reply_markup=builder.as_markup(resize_keyboard=True))
     except: pass
 
 #Where
