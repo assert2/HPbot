@@ -439,6 +439,7 @@ async def broadcast_message(users_data: list, text: str = None, photo_id: int = 
                 await bot.send_audio(chat_id=chat_id, audio=audio_id, caption=caption)
             good_send += 1
         except Exception as e:
+            db.delete_id(user[0])
             print(e)
             bad_send += 1
         finally:
